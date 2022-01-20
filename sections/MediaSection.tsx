@@ -1,7 +1,9 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
-import Container from '@/components/Container';
+import Container from "@/components/Container";
+import VideoSlider from "@/components/Slider/VideoSlider";
+import { SliderData } from "@/components/Slider/SliderData";
 
 const MediaSection = () => {
   return (
@@ -14,7 +16,10 @@ const MediaSection = () => {
               <span className="block font-semibold">Cybermonkeys LLC</span>
             </h1>
             <p className="text-xl font-medium mb-8">
-              We are currently working on some videos that will be of benefit to those looking to learn more about Blockchain. We look forward to providing you with valuable content, thank you for your patience and understanding.
+              We are currently working on some videos that will be of benefit to
+              those looking to learn more about Blockchain. We look forward to
+              providing you with valuable content, thank you for your patience
+              and understanding.
             </p>
             <p>
               <Link href="/">
@@ -28,6 +33,9 @@ const MediaSection = () => {
             <div className="pt-16">
               <Image src="/images/media.png" width={540} height={432} />
             </div>
+          </div>
+          <div>
+            <VideoSlider slides={SliderData}></VideoSlider>
           </div>
         </div>
       </Container>

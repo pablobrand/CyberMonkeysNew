@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import "@/styles/VideoSlider.css";
 
 import "@/styles/global.css";
 
