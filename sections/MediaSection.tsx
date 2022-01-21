@@ -2,13 +2,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Container from "@/components/Container";
-import VideoSlider from "@/components/Slider/VideoSlider";
-import { SliderData } from "@/components/Slider/SliderData";
+import VideoSlider from "@/components/Slider/VideoSlider.js";
+import { SliderData } from "@/components/Slider/SliderData.js";
 
 const MediaSection = () => {
   return (
     <section className="grid min-h-screen mt-20 mb-24 text-white">
       <Container>
+      <VideoSlider slides={SliderData}/>
         <div className="grid grid-cols-12">
           <div className="col-span-12 lg:col-span-5">
             <h1 className="text-5xl pt-32">
@@ -34,9 +35,7 @@ const MediaSection = () => {
               <Image src="/images/media.png" width={540} height={432} />
             </div>
           </div>
-          <div>
-            <VideoSlider slides={SliderData}></VideoSlider>
-          </div>
+        
         </div>
       </Container>
     </section>
