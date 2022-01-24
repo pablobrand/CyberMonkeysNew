@@ -6,7 +6,7 @@
     align-items:  center;
 }
 
-.image {
+.video {
     width: 1000px;
     height: 600px;
     border-radius: 5px;
@@ -15,9 +15,9 @@
 .right-arrow {
     position: absolute;
     top: 50%;
-    right: 32px;
+    right: 40px;
     font-size: 3rem;
-    color: black;
+    color: rgb(255, 255, 255);
     z-index: 10;
     cursor: pointer;
     user-select: none;
@@ -26,9 +26,9 @@
 .left-arrow {
     position: absolute;
     top: 50%;
-    left: 32px;
+    left: 40px;
     font-size: 3rem;
-    color: black;
+    color: rgb(255, 255, 255);
     z-index: 10;
     cursor: pointer;
     user-select: none;

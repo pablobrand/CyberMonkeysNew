@@ -20,14 +20,22 @@ const VideoSlider = ({ slides }) => {
 
   return (
     <section className="slider">
-      <FaAngleLeft className="left-arrow" />
-      <FaAngleRight className="right-arrow" />
+      <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+      <FaAngleRight className="right-arrow" onClick={nextSlide} />
       {SliderData.map((slide, index) => {
         return (
-          <div className={index === current ? "slide active" : "slide"} key={index}>
-            {index === current && (<object data={slide.video} alt="cybermonkeys slider" />)}
-
-          </div>   
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === current && (
+              <object
+                data={slide.video}
+                alt="cybermonkeys slider"
+                className="video"
+              />
+            )}
+          </div>
         );
       })}
     </section>
