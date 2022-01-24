@@ -6,6 +6,8 @@ const VideoSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
 
+
+  //controla la posicion de los slides
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
@@ -14,10 +16,14 @@ const VideoSlider = ({ slides }) => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
+  //if no slides no muestra nada
   if (!Array.isArray(slides) || slides.length <= 0) {
     return null;
   }
 
+  //This file is exported to MediaSection.tsx
+  //The style and animation are in folder "styles", file "VideoSlider.css" You can't import the css file here, it is in _app
+  //"FaAngle" are icons
   return (
     <section className="slider">
       <FaAngleLeft className="left-arrow" onClick={prevSlide} />
@@ -30,9 +36,9 @@ const VideoSlider = ({ slides }) => {
           >
             {index === current && (
               <object
-                data={slide.video}
+                data={slide.video} //loads the current slide from "SliderData.js" file
                 alt="cybermonkeys slider"
-                className="video"
+                className="video" //if the page cant load the slide, this message will appear
               />
             )}
           </div>
