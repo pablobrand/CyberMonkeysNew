@@ -18,7 +18,6 @@ const Media = () => {
       {/* <VideosSection /> 
       <LatestNewsSection /> */
       }
-      <VideoSlider slides={SliderData} />
       <Footer />
     </Layout>
   );

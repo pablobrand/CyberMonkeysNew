@@ -8,7 +8,7 @@ export const SliderData = [
       "https://www.prosamexico.mx/wp-content/uploads/2020/09/post_blockchain.jpg",
   },
   {
-    video: "https://blog.stockcrowd.com/hubfs/marketing-social.jpg"
+    video: "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg"
   },
   {
     video:
