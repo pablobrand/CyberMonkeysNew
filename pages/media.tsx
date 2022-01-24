@@ -18,9 +18,11 @@ const Media = () => {
       {/* <VideosSection /> 
       <LatestNewsSection /> */
       }
+      <VideoSlider slides={SliderData} />
       <Footer />
     </Layout>
   );
 };
 
 export default Media;
+  

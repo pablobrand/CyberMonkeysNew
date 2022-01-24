@@ -4,9 +4,9 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--inspect=9876\" next dev",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next build",
-    "start": "next start"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js; next start"
   },
   "dependencies": {
     "@formspree/react": "^2.2.4",
