@@ -2,13 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Container from "@/components/Container";
-import VideoSlider from "@/components/Slider/VideoSlider.js";
-import { SliderData } from "@/components/Slider/SliderData.js";
 
 const MediaSection = () => {
   return (
     <section className="grid min-h-screen mt-20 mb-24 text-white">
-      <VideoSlider slides={SliderData}/>
+      
       <Container>
         <div className="grid grid-cols-12">
           <div className="col-span-12 lg:col-span-5">
