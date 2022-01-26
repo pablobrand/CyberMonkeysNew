@@ -19,7 +19,7 @@ const WhyChooseUsSection = () => {
               Why Choose Us
             </h4>
             <h2 className="text-3xl font-bold mb-8">
-              WE'VE BUILT A PLATFORM TO BUT AND SELL SHARES
+              WE'VE BUILT A PLATFORM TO BUY AND SELL SHARES
             </h2>
             <div className="flex mb-6">
               <div className="flex-none mr-8">
