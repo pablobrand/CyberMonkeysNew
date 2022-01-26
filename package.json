@@ -1,11 +1,11 @@
 {
-  "name": "Cybermonkeys",
+  "name": "cybermonkeys",
   "description": "Cybermonkeys is a Digital Solutions Shop, focusing on Video, Graphics, Web, Blockchain and AR/VR Solutions.",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; next build",
     "start": "next start"
   },
   "dependencies": {

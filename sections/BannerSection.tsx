@@ -4,9 +4,36 @@ import Container from "@/components/Container";
 
 const BannersSection = () => {
   return (
-    <section>
-      <div className="container mx-auto px-4 mt-12">
-        <div className="grid grid-rows-4 grid-flow-col gap-4">
+    <section className="text-white mb-20">
+      <Container>
+      <div className="container mx-auto px-4 mt-48 w-full h-607">
+        <div className="grid grid-rows-1 grid-flow-col gap-12">
+          <div>
+            <Image src="/images/blockchain.png" width={2448} height={607} />
+          </div>
+          <div>
+            <Image src="/images/blockchain.png" width={2448} height={607} />
+          </div>
+        </div>
+
+        <div className="grid grid-rows-1 grid-flow-col gap-12">
+          <div>
+            <Image
+              src="/images/brandingAndGraphicDesign.png"
+              width={2448}
+              height={607}
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/brandingAndGraphicDesign.png"
+              width={2448}
+              height={607}
+            />
+          </div>
+        </div>
+
+        <div className="grid grid-rows-1 grid-flow-col gap-12">
           <div>
             <Image
               src="/images/audiovisualProduction.png"
@@ -22,7 +49,18 @@ const BannersSection = () => {
             />
           </div>
         </div>
+
+        <div className="grid grid-rows-1 grid-flow-col gap-12">
+          <div>
+            <Image src="/images/mediaContent.png" width={2448} height={607} />
+          </div>
+
+          <div>
+            <Image src="/images/mediaContent.png" width={2448} height={607} />
+          </div>
+        </div>
       </div>
+      </Container>
     </section>
   );
 };
