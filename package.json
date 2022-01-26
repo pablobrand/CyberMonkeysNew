@@ -1,6 +1,6 @@
 {
-  "name": "cybermonkeys-nextjs",
-  "description": "Cybermonkeys website",
+  "name": "Cybermonkeys",
+  "description": "Cybermonkeys is a Digital Solutions Shop, focusing on Video, Graphics, Web, Blockchain and AR/VR Solutions.",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
