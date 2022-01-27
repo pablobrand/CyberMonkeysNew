@@ -4,7 +4,7 @@ import Container from "@/components/Container";
 
 const BannersSection = () => {
   return (
-    <section className="bg-no-repeat bg-contain grid content-center min-h-screen text-white">
+    
       <Container>
         <div className="container mx-auto px-4 mt-48 w-2448 h-607">
           <div className="grid grid-rows-1 grid-flow-col gap-12">
@@ -63,7 +63,6 @@ const BannersSection = () => {
           </div>
         </div>
       </Container>
-    </section>
   );
 };
 

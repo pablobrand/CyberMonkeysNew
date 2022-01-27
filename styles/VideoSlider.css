@@ -1,5 +1,5 @@
 .slider {
-    position: absolute;
+    position: relative;
     height: 80vh;
     display: flex;
     justify-content: center;
