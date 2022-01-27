@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { SliderData } from "./SliderData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { Container } from "next/app";
 
 const VideoSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = slides.length;
-
 
   //controla la posicion de los slides
   const nextSlide = () => {
@@ -26,24 +26,26 @@ const VideoSlider = ({ slides }) => {
   //"FaAngle" are icons
   return (
     <section className="slider">
-      <FaAngleLeft className="left-arrow" onClick={prevSlide} />
-      <FaAngleRight className="right-arrow" onClick={nextSlide} />
-      {SliderData.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <object
-                data={slide.video} //loads the current slide from "SliderData.js" file
-                alt="cybermonkeys slider"
-                className="video" //if the page cant load the slide, this message will appear
-              />
-            )}
-          </div>
-        );
-      })}
+      <div className="items-center">
+        <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+        <FaAngleRight className="right-arrow" onClick={nextSlide} />
+        {SliderData.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <object
+                  data={slide.video} //loads the current slide from "SliderData.js" file
+                  alt="cybermonkeys slider"
+                  className="video" //if the page cant load the slide, this message will appear
+                />
+              )}
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };
