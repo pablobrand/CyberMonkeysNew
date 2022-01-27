@@ -25,27 +25,27 @@ const VideoSlider = ({ slides }) => {
   //The style and animation are in folder "styles", file "VideoSlider.css" You can't import the css file here, it is in _app
   //"FaAngle" are icons
   return (
-    <section className="slider w-full items-center">
+    <section className="slider">
       <Container>
         <div>
-          <FaAngleLeft className="left-arrow" onClick={prevSlide} />
-          <FaAngleRight className="right-arrow" onClick={nextSlide} />
-          {SliderData.map((slide, index) => {
-            return (
-              <div
-                className={index === current ? "slide active" : "slide"}
-                key={index}
-              >
-                {index === current && (
-                  <object
-                    data={slide.video} //loads the current slide from "SliderData.js" file
-                    alt="cybermonkeys slider"
-                    className="video" //if the page cant load the slide, this message will appear
-                  />
-                )}
-              </div>
-            );
-          })}
+        <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+        <FaAngleRight className="right-arrow" onClick={nextSlide} />
+        {SliderData.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <object
+                  data={slide.video} //loads the current slide from "SliderData.js" file
+                  alt="cybermonkeys slider" //if the page cant load the slide, this message will appear
+                  className="video" 
+                />
+              )}
+            </div>
+          );
+        })}
         </div>
       </Container>
     </section>

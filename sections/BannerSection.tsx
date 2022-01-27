@@ -4,65 +4,69 @@ import Container from "@/components/Container";
 
 const BannersSection = () => {
   return (
-    
-      <Container>
-        <div className="container mx-auto px-4 mt-48 w-2448 h-607">
-          <div className="grid grid-rows-1 grid-flow-col gap-12">
-            <div>
-              <Image src="/images/blockchain.png" width={2448}
-                height={607}/>
-            </div> 
-            <div>
-              <Image src="/images/blockchain.png" width={2448}
-                height={607} />
-            </div>
+    <section className="w-full h-700">
+      <div className="px-4 mt-48">
+        <div className="grid lg:grid-cols-2 gap-4">
+          <div>
+            <Image src="/images/blockchain.png" width={2448} height={607} />
           </div>
 
-          <div className="grid grid-rows-1 grid-flow-col gap-12">
-            <div>
-              <Image
-                src="/images/brandingAndGraphicDesign.png"
-                width={2448}
-                height={607}
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/brandingAndGraphicDesign.png"
-                width={2448}
-                height={607}
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-rows-1 grid-flow-col gap-12">
-            <div>
-              <Image
-                src="/images/audiovisualProduction.png"
-                width={2448}
-                height={607}
-              />
-            </div>
-            <div>
-              <Image
-                src="/images/audiovisualProduction.png"
-                width={2448}
-                height={607}
-              />
-            </div>
-          </div>
-
-          <div className="grid grid-rows-1 grid-flow-col gap-12">
-            <div>
-              <Image src="/images/mediaContent.png" width={2448} height={607} />
-            </div>
-
-            <div>
-              <Image src="/images/mediaContent.png" width={2448} height={607} />
-            </div>
+          <div>
+            <h2 className="font-black text-white">BLOCKCHAIN NEEDS</h2>
+            <h2 className="font-medium text-banner-yellow">TECHNOLOGY</h2>
+            <p className="text-white">
+              We are a group of technologically of innovative IT Engineers, in
+              the field of the web, Digital Graphics, Video and Blockchain to
+              help bussines adapt to this new wave of technological advancement
+            </p>
           </div>
         </div>
-      </Container>
+
+        <div className="grid lg:grid-cols-2 gap-4">
+          <div>
+            <Image
+              src="/images/brandingAndGraphicDesign.png"
+              width={2448}
+              height={607}
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/brandingAndGraphicDesign.png"
+              width={2448}
+              height={607}
+            />
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-4">
+          <div>
+            <Image
+              src="/images/audiovisualProduction.png"
+              width={2448}
+              height={607}
+            />
+          </div>
+          <div>
+            <Image
+              src="/images/audiovisualProduction.png"
+              width={2448}
+              height={607}
+            />
+          </div>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-4">
+          <div>
+            <Image src="/images/mediaContent.png" width={2448} height={607} />
+          </div>
+
+          <div>
+            <Image src="/images/mediaContent.png" width={2448} height={607} />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
