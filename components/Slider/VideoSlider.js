@@ -26,8 +26,7 @@ const VideoSlider = ({ slides }) => {
   //"FaAngle" are icons
   return (
     <section className="slider">
-      <div className="items-center">
-        <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+      <FaAngleLeft className="left-arrow" onClick={prevSlide} />
         <FaAngleRight className="right-arrow" onClick={nextSlide} />
         {SliderData.map((slide, index) => {
           return (
@@ -45,7 +44,6 @@ const VideoSlider = ({ slides }) => {
             </div>
           );
         })}
-      </div>
     </section>
   );
 };
