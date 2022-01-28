@@ -28,24 +28,27 @@ const VideoSlider = ({ slides }) => {
     <section className="slider">
       <Container>
         <div>
-        <FaAngleLeft className="left-arrow" onClick={prevSlide} />
-        <FaAngleRight className="right-arrow" onClick={nextSlide} />
-        {SliderData.map((slide, index) => {
-          return (
-            <div
-              className={index === current ? "slide active" : "slide"}
-              key={index}
-            >
-              {index === current && (
-                <object
-                  data={slide.video} //loads the current slide from "SliderData.js" file
-                  alt="cybermonkeys slider" //if the page cant load the slide, this message will appear
-                  className="video" 
-                />
-              )}
-            </div>
-          );
-        })}
+          <div className="space-x-6">
+            <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+            <FaAngleRight className="right-arrow" onClick={nextSlide} />
+          </div>
+
+          {SliderData.map((slide, index) => {
+            return (
+              <div
+                className={index === current ? "slide active" : "slide"}
+                key={index}
+              >
+                {index === current && (
+                  <object
+                    data={slide.video} //loads the current slide from "SliderData.js" file
+                    alt="cybermonkeys slider" //if the page cant load the slide, this message will appear
+                    className="video"
+                  />
+                )}
+              </div>
+            );
+          })}
         </div>
       </Container>
     </section>
