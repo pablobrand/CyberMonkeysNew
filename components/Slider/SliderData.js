@@ -1,17 +1,17 @@
 export const SliderData = [
   {
     video:
-      "https://www.eleconomista.com.mx/__export/1620932331582/sites/eleconomista/img/2021/05/11/bc_ocere_bitcoin-blockchain.png_673822677.png",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1643413400/ARDemo/rockTwo_u3gvlz.png",
   },
   {
     video:
-      "https://www.prosamexico.mx/wp-content/uploads/2020/09/post_blockchain.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1643413400/ARDemo/rockOne_ac1lze.png",
   },
   {
-    video: "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg"
+    video: "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1643413400/ARDemo/rockFour_je3tbe.png"
   },
   {
     video:
-      "https://cdn.mos.cms.futurecdn.net/FQiMdRcDKGsgcxsMfhoXm3-1200-80.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1643413400/ARDemo/RockThree_mgkexo.png",
   },
 ];

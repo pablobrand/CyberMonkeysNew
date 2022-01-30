@@ -38,7 +38,7 @@ const VideoSlider = ({ slides }) => {
                 <object
                   data={slide.video} //loads the current slide from "SliderData.js" file
                   alt="cybermonkeys slider"
-                  className="video" //if the page cant load the slide, this message will appear
+                  className="video md:container md:mx-auto" //if the page cant load the slide, this message will appear
                 />
               )}
             </div>
