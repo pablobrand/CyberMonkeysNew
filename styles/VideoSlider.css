@@ -1,14 +1,15 @@
 .slider {
     position: relative;
-    height: 25vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items:  center;
+    padding-bottom: 80px;
 }
 
 .video {
-    width: 1760px;
-    height: 790px;
+    width: auto;
+    height: auto;
     border-radius: 0px;
 }
 
