@@ -28,11 +28,8 @@ const VideoSlider = ({ slides }) => {
     <section className="slider">
       <Container>
         <div>
-          <div className="space-x-6">
-            <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+          <FaAngleLeft className="left-arrow" onClick={prevSlide} />
             <FaAngleRight className="right-arrow" onClick={nextSlide} />
-          </div>
-
           {SliderData.map((slide, index) => {
             return (
               <div
