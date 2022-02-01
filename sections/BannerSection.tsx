@@ -1,8 +1,14 @@
 import Image from "next/image";
+import React, { useEffect, useState } from 'react'
 
 import Container from "@/components/Container";
 
 const BannersSection = () => {
+  useEffect(() => {
+    const timer = setTimeout(() => <BannersSection/>, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section className="relative w-full text-white text-center">
       <Container>
