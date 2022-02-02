@@ -94,20 +94,21 @@ const Footer = () => {
       </Container>
 
       <div className="px-12 text-center text-white">
-        <hr className="mb-4 relative" />
+        {/* <hr className="mb-4 relative" /> */}
         <p className="mb-0">
           <Link href="/">
             <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
           </Link>
         </p>
       </div>
-      <div className="relative h-auto w-auto flex lg:justify-center lg:items-center">
+      <div className="relative max-w-screen justify-center items-center">
+        <div className="">
         <Image
           src="/images/footerBackground.png"
-          className="items-center"
-          width={2307.6}
-          height={718.8}
+          width={2499}
+          height={778.7}
         />
+        </div>
       </div>
     </footer>
   );
