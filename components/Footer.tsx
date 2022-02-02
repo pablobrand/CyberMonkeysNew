@@ -1,22 +1,22 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
   faYoutube,
   faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
-import Container from '@/components/Container';
-import Input from '@/components/Input';
-import Button from '@/components/Button';
+import Container from "@/components/Container";
+import Input from "@/components/Input";
+import Button from "@/components/Button";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 pt-10 pb-4">
+    <footer className="pt-10 pt-10 pb-4 justify-center items-center">
       <Container>
         <div className="text-center mb-2">
           <Image src="/images/CM-white.svg" width={150} height={111} />
@@ -92,6 +92,7 @@ const Footer = () => {
           </div>
         </div>
       </Container>
+
       <div className="px-12 text-center text-white">
         <hr className="mb-4 relative" />
         <p className="mb-0">
@@ -99,6 +100,14 @@ const Footer = () => {
             <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
           </Link>
         </p>
+      </div>
+      <div className="relative h-auto w-auto flex lg:justify-center lg:items-center">
+        <Image
+          src="/images/footerBackground.png"
+          className="items-center"
+          width={2307.6}
+          height={718.8}
+        />
       </div>
     </footer>
   );
