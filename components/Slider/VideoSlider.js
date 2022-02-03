@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { SliderData } from "./SliderData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { Container } from "next/app";
 
@@ -30,7 +29,7 @@ const VideoSlider = ({ slides }) => {
         <div>
           <FaAngleLeft className="left-arrow" onClick={prevSlide} />
             <FaAngleRight className="right-arrow" onClick={nextSlide} />
-          {SliderData.map((slide, index) => {
+          {slides.map((slide, index) => {
             return (
               <div
                 className={index === current ? "slide active" : "slide"}

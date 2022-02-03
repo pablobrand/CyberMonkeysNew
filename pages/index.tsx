@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VideoSlider from "@/components/Slider/VideoSlider";
-import { SliderData } from "@/components/Slider/SliderData.js";
+//import { SliderData } from "@/components/Slider/SliderData.js";
 import VideoSlider1 from "@/components/Slider/VideoSlider"
 
 import HomeSection from "@/sections/HomeSection";
@@ -12,14 +12,14 @@ import WhyChooseUsSection from "@/sections/WhyChooseUsSection";
 import LatestNewsSection from "@/sections/LatestNewsSection";
 import FAQSection from "@/sections/FAQSection";
 import BannerSection from "@/sections/BannerSection";
-const HomeSliderData = [
+const SliderData = [
   {
     video:
-      "https://www.eleconomista.com.mx/__export/1620932331582/sites/eleconomista/img/2021/05/11/bc_ocere_bitcoin-blockchain.png_673822677.png",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345570/CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg",
   },
   {
     video:
-      "https://www.prosamexico.mx/wp-content/uploads/2020/09/post_blockchain.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345568/CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
   },
   {
     video: "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg"
