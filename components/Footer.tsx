@@ -101,7 +101,7 @@ const Footer = () => {
           </Link>
         </p>
       </div>
-      <div className="relative max-w-screen justify-center items-center">
+      <div className="relative object-fill justify-center items-center">
         <div className="">
         <Image
           src="/images/footerBackground.png"
