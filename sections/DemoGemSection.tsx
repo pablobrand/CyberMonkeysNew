@@ -1,10 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
-import { SliderData } from "@/components/Slider/SliderData";
 
 import Container from "@/components/Container";
 import VideoSlider from "@/components/Slider/VideoSlider";
 
+const SliderDataGemstone = [
+    {
+      video:
+        "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345570/CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg",
+    },
+    {
+      video:
+        "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345568/CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
+    },
+    {
+      video: "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg"
+    },
+    {
+      video:
+        "https://cdn.mos.cms.futurecdn.net/FQiMdRcDKGsgcxsMfhoXm3-1200-80.jpg",
+    },
+  ];
 
 const DemoGemSection = () => {
     return (
@@ -19,7 +35,7 @@ const DemoGemSection = () => {
                     </h1>
                 </div>
                 <div className="md:container md:mx-auto pb-12 pt-32">
-                    <VideoSlider slides={SliderData} />
+                    <VideoSlider slides={SliderDataGemstone} />
                 </div>
             </Container>
             <Container>

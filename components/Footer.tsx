@@ -101,14 +101,9 @@ const Footer = () => {
           </Link>
         </p>
       </div>
-      <div className="relative object-fill justify-center items-center">
-        <div className="">
-        <Image
-          src="/images/footerBackground.png"
-          width={2499}
-          height={778.7}
-        />
-        </div>
+
+      <div className="fixfooter">
+        <Image src="/images/footerBackground.png" width={1923} height={599} />
       </div>
     </footer>
   );
