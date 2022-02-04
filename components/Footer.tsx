@@ -102,9 +102,19 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="fixfooter">
-        <Image src="/images/footerBackground.png" width={1923} height={599} />
+      <div className="fixfooter min-w-screen tems-center justify-between flex-wrap">
+        <div className="w-full">
+          <Image src="/images/footerBackground.png" width={1923} height={599} />
+        </div>
       </div>
+      
+
+      {/*
+      <div className="grid grid-cols-10 w-screen">
+        <div className="col-span-12 lg:col-span-5  text-center  w-full">
+          <Image src="/images/footerBackground.png" width={1923} height={599} />
+        </div>
+      </div> */}
     </footer>
   );
 };

@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VideoSlider from "@/components/Slider/VideoSlider";
 //import { SliderData } from "@/components/Slider/SliderData.js";
-import VideoSlider1 from "@/components/Slider/VideoSlider"
 
 import HomeSection from "@/sections/HomeSection";
 import GlobeSection from "@/sections/GlobeSection";
