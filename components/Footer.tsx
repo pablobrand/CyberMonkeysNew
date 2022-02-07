@@ -102,19 +102,17 @@ const Footer = () => {
         </p>
       </div>
 
-      <div className="min-w-screen items-center justify-between flex-wrap">
-        <div className="w-full">
-          <Image src="/images/footerBackground.png" width={1923} height={599} />
-        </div>
-      </div>
+      {/* <div className="absolute min-w-screen items-center justify-center">
       
-
-      {/*
-      <div className="grid grid-cols-10 w-screen">
-        <div className="col-span-12 lg:col-span-5  text-center  w-full">
-          <Image src="/images/footerBackground.png" width={1923} height={599} />
-        </div>
       </div> */}
+
+      {/* fixfooter es una clase, guarde el file en componentes: footerImg.css*/ }
+      <Image
+        src="/images/footerBackground.png"
+        className="fixfooter absolute w-screen"
+        width={1923}
+        height={599}
+      />
     </footer>
   );
 };
