@@ -20,8 +20,6 @@ const VideoSlider = ({ slides }) => {
     return null;
   }
 
-  //This file is exported to MediaSection.tsx
-  //The style and animation are in folder "styles", file "VideoSlider.css" You can't import the css file here, it is in _app
   //"FaAngle" are icons
   return (
     <section className="slider">
@@ -37,8 +35,8 @@ const VideoSlider = ({ slides }) => {
               >
                 {index === current && (
                   <object
-                    data={slide.video} //loads the current slide from "SliderData.js" file
-                    alt="cybermonkeys slider" //if the page cant load the slide, this message will appear
+                    data={slide.video} //object with values for slider, received from section using it
+                    alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
                     className="w-screen"
                   />
                 )}

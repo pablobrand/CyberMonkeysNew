@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 import VideoSlider from "@/components/Slider/VideoSlider";
 //import { SliderData } from "@/components/Slider/SliderData.js";
 

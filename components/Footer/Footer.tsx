@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import style from "./footerImg.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -16,9 +16,9 @@ import Button from "@/components/Button";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 pt-10 pb-4 justify-center items-center">
+    <footer className={style.footerMain}>
       <Container>
-        <div className="text-center mb-2">
+        <div className="text-center mb-2 pt-40">
           <Image src="/images/CM-white.svg" width={150} height={111} />
         </div>
         {/* <h2 className="text-center font-bold text-3xl text-white mb-10">
@@ -40,7 +40,7 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faFacebookF}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
@@ -51,7 +51,7 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faTwitter}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
@@ -62,7 +62,7 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
@@ -73,7 +73,7 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faYoutube}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
@@ -91,28 +91,23 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        <div className="px-12 text-center text-white">
+          {/* <hr className="mb-4 relative" /> */}
+          <p className="mb-0">
+            <Link href="/">
+              <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
+            </Link>
+          </p>
+        </div>
+        {/* fixfooter es una clase, guarde el file en componentes: footerImg.css*/}
       </Container>
-
-      <div className="px-12 text-center text-white">
-        {/* <hr className="mb-4 relative" /> */}
-        <p className="mb-0">
-          <Link href="/">
-            <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
-          </Link>
-        </p>
-      </div>
-
-      {/* <div className="absolute min-w-screen items-center justify-center">
-      
+      {/* <div className={style.imageContainer}>
+        <Image
+          src="/images/footerBackground.png"
+          layout="fill"
+          className={style.image}
+        />
       </div> */}
-
-      {/* fixfooter es una clase, guarde el file en componentes: footerImg.css*/ }
-      <Image
-        src="/images/footerBackground.png"
-        className="fixfooter absolute w-screen"
-        width={1923}
-        height={599}
-      />
     </footer>
   );
 };
