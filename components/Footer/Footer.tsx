@@ -46,7 +46,7 @@ const Footer = () => {
               </li>
               <li className="inline-block mr-4">
                 <a
-                  href="javascript:"
+                  href="https://twitter.com/CybermonkeysUSA"
                   className="rounded-full p-3 bg-black bg-opacity-60 inline-block"
                 >
                   <FontAwesomeIcon
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li className="inline-block mr-4">
                 <a
-                  href="javascript:"
+                  href="https://www.youtube.com/channel/UCU8ynCVA4Ie20gdgbIufWmg/featured"
                   className="rounded-full p-3 bg-black bg-opacity-60 inline-block"
                 >
                   <FontAwesomeIcon

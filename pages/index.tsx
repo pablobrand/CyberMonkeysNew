@@ -10,7 +10,7 @@ import ServicesSection from "@/sections/ServicesSection";
 import WhyChooseUsSection from "@/sections/WhyChooseUsSection";
 import LatestNewsSection from "@/sections/LatestNewsSection";
 import FAQSection from "@/sections/FAQSection";
-import BannerSection from "@/sections/BannerSection";
+import BannerSection from "@/sections/LandingSection";
 const SliderData = [
   {
     video:
