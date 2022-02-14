@@ -24,7 +24,8 @@ module.exports = {
     },
     extend: {
       colors:{
-        'banner-yellow': '#fcd538'
+        'banner-yellow': '#fcd538',
+        'bluee': '#6c9ae7'
       },
       fontFamily: {
         rajdhani: ["'Rajdhani-Regular', sans-serif", ...defaultFontsSerif],
