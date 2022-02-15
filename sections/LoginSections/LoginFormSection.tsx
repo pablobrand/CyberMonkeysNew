@@ -14,7 +14,7 @@ const LoginForm = () => {
     return <h2 className="text-center text-5xl mb-6 font-bold">Thank You!!</h2>;
   }
   return (
-    <section className="text-white pt-24">
+    <section className="text-white pt-20 pb-10">
       <Container>
         <div className="grid grid-cols-12 gap-4 pt-40">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3">
@@ -22,16 +22,20 @@ const LoginForm = () => {
             <h4 className="text-center text-2xl mb-6 font-bold">
               Log In to continue
             </h4>
-            <div className="w-full flex flex-col items-center mt-10">
+            <div className="flex flex-col items-center mt-8">
               <form onSubmit={handleSubmit}>
-                <Input type="email" placeholder="Email"/>
-                <Input type="password" placeholder="Password" className="mt-2" />
-                <div className="text-center pt-2 ">
-                  <a className="text-sm text-white font-medium cursor-pointer">
-                    Forget your password?
-                  </a>
-                </div>
+                <Input type="email" placeholder="Email" />
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  className="mt-2"
+                />
               </form>
+              <div className="text-center pt-2 ">
+                <a className="text-sm text-white font-medium cursor-pointer">
+                  Forget your password?
+                </a>
+              </div>
             </div>
           </div>
         </div>

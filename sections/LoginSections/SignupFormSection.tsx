@@ -18,7 +18,7 @@ const SignupForm = () => {
     );
   }
   return (
-    <section className="text-white pt-24">
+    <section className="text-white pt-20 pb-10">
       <Container>
         <div className="grid grid-cols-12 gap-4 pt-40">
           <div className="col-span-12 lg:col-span-8 lg:col-start-3">
@@ -26,18 +26,14 @@ const SignupForm = () => {
             <h4 className="text-center text-2xl mb-6 font-bold">
               Sign up to continue
             </h4>
-            <div className="w-full flex flex-col items-center mt-10">
+            <div className="w-full flex flex-col items-center mt-8">
               <form onSubmit={handleSubmit}>
                 <Input type="text" placeholder="Name" />
                 <Input type="email" placeholder="Email" className="mt-2" />
                 <Input type="password" placeholder="Password" className="mt-2" />
-                <Input type="password" placeholder="Confirm Password" className="mt-2" />
-                <div className="text-center pt-2 ">
-                  <a className="text-sm text-white font-medium cursor-pointer">
-                    Forget your password?
-                  </a>
-                </div>
+                <Input type="password" placeholder="Confirm Password" className="mt-2" />                
               </form>
+              
             </div>
           </div>
         </div>
