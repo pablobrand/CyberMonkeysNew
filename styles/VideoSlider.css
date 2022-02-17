@@ -1,14 +1,15 @@
 .slider {
     position: relative;
-    height: 80vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items:  center;
+    padding-bottom: 80px;
 }
 
 .video {
-    width: 1760px;
-    height: 790px;
+    width: auto;
+    height: auto;
     border-radius: 0px;
 }
 
@@ -42,5 +43,8 @@
 .slide.active {
     opacity: 1;
     transition-duration: 1s;
-    transform: scale(1.08);
+    transform: scale(1);
+}
+.w-screen{
+    object-fit: contain;
 }

@@ -1,0 +1,27 @@
+.footerMain{
+  background-image: url("/images/footerBackground.png");
+  width: "100%";
+  height:"auto";
+  background-repeat: "no-repeat";
+  background-size: "cover";
+  /* opacity: 0.9; */
+  /* background-position-y: -100px; */
+}
+.fixfooter {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.imageContainer{
+  width: 100%;
+}
+.imageContainer >div{
+  position: unset !important;
+  padding-top: -20px;
+}
+.image{
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}

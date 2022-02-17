@@ -2,16 +2,16 @@ import Layout from '@/components/Layout';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer/Footer';
 
-import NFTSectionOpenSea from '@/sections/NftSectionOpenSea';
+import DemoGemSection from '@/sections/DemoGemSection';
 
-const NFT = () => {
+const DemoGem = () => {
     return (
         <Layout>
             <Navbar />
-            <NFTSectionOpenSea />
+            <DemoGemSection />
             <Footer />
         </Layout>
     );
 };
 
-export default NFT;
+export default DemoGem;
