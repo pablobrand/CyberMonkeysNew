@@ -5,6 +5,7 @@ import Button from "@/components/Button";
 import { useForm, ValidationError } from "@formspree/react";
 import { useContext, useState } from "react";
 import { AccountContext } from "./accountContext";
+import { AiOutlineUser } from "react-icons/ai";
 
 const SignupForm = () => {
   const { switchToLogin } = useContext(AccountContext);
@@ -30,10 +31,17 @@ const SignupForm = () => {
               <form onSubmit={handleSubmit}>
                 <Input type="text" placeholder="Name" />
                 <Input type="email" placeholder="Email" className="mt-2" />
-                <Input type="password" placeholder="Password" className="mt-2" />
-                <Input type="password" placeholder="Confirm Password" className="mt-2" />                
+                <Input
+                  type="password"
+                  placeholder="Password"
+                  className="mt-2"
+                />
+                <Input
+                  type="password"
+                  placeholder="Confirm Password"
+                  className="mt-2"
+                />
               </form>
-              
             </div>
           </div>
         </div>
