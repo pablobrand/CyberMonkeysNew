@@ -24,9 +24,10 @@ const DemoJewerlySection = () => {
         </div>
         <div className="grid">
           <p className="text-xl font-medium mb-8">
-            If you dont have a wallet, please click on the link below:
+            Below you will find the Demo for the 3d Model
           </p>
-          <p>
+          <p className="font-sans text-xl text-center"> <Link href="https://adobe.ly/3oYzfOC">Click To See in 3D</Link></p>
+          {/* <p>
             <iframe
               id="demoJV-iframe"
               title="3D Jewlery Model Demo"
@@ -36,7 +37,7 @@ const DemoJewerlySection = () => {
               frameBorder="0"
               allowFullScreen
             ></iframe>
-          </p>
+          </p> */}
         </div>
       </Container>
 
@@ -49,7 +50,7 @@ const DemoJewerlySection = () => {
             </h1>
             <div className="pt-2">
               <Image
-                src="/images/RockModelQRCode.png"
+                src="/images/Neckless AR Demo QR Code.png"
                 width={540}
                 height={540}
               />
