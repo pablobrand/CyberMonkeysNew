@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { SliderData } from "./SliderData";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { Container } from "next/app";
 
@@ -21,29 +20,31 @@ const VideoSlider = ({ slides }) => {
     return null;
   }
 
-  //This file is exported to MediaSection.tsx
-  //The style and animation are in folder "styles", file "VideoSlider.css" You can't import the css file here, it is in _app
   //"FaAngle" are icons
   return (
     <section className="slider">
-      <FaAngleLeft className="left-arrow" onClick={prevSlide} />
-        <FaAngleRight className="right-arrow" onClick={nextSlide} />
-        {SliderData.map((slide, index) => {
-          return (
-            <div
-              className={index === current ? "slide active" : "slide"}
-              key={index}
-            >
-              {index === current && (
-                <object
-                  data={slide.video} //loads the current slide from "SliderData.js" file
-                  alt="cybermonkeys slider"
-                  className="video md:container md:mx-auto" //if the page cant load the slide, this message will appear
-                />
-              )}
-            </div>
-          );
-        })}
+      <Container>
+        <div>
+          <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+            <FaAngleRight className="right-arrow" onClick={nextSlide} />
+          {slides.map((slide, index) => {
+            return (
+              <div
+                className={index === current ? "slide active" : "slide"}
+                key={index}
+              >
+                {index === current && (
+                  <object
+                    data={slide.video} //object with values for slider, received from section using it
+                    alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
+                    className="w-screen"
+                  />
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </Container>
     </section>
   );
 };

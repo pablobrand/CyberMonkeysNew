@@ -1,6 +1,6 @@
 import Layout from '@/components/Layout';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Footer from '@/components/Footer/Footer';
 
 import DemoGemSection from '@/sections/DemoGemSection';
 

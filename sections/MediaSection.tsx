@@ -1,11 +1,12 @@
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 
-import Container from '@/components/Container';
+import Container from "@/components/Container";
 
 const MediaSection = () => {
   return (
     <section className="grid min-h-screen mt-20 mb-24 text-white">
+      
       <Container>
         <div className="grid grid-cols-12">
           <div className="col-span-12 lg:col-span-5">
@@ -14,7 +15,10 @@ const MediaSection = () => {
               <span className="block font-semibold">Cybermonkeys LLC</span>
             </h1>
             <p className="text-xl font-medium mb-8">
-              We are currently working on some videos that will be of benefit to those looking to learn more about Blockchain. We look forward to providing you with valuable content, thank you for your patience and understanding.
+              We are currently working on some videos that will be of benefit to
+              those looking to learn more about Blockchain. We look forward to
+              providing you with valuable content, thank you for your patience
+              and understanding.
             </p>
             <p>
               <Link href="/">
@@ -29,6 +33,7 @@ const MediaSection = () => {
               <Image src="/images/media.png" width={540} height={432} />
             </div>
           </div>
+        
         </div>
       </Container>
     </section>

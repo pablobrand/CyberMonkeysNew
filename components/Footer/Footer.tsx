@@ -1,24 +1,24 @@
-import Image from 'next/image';
-import Link from 'next/link';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from "next/image";
+import Link from "next/link";
+import style from "./footerImg.module.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
   faTwitter,
   faInstagram,
   faYoutube,
   faLinkedinIn,
-} from '@fortawesome/free-brands-svg-icons';
+} from "@fortawesome/free-brands-svg-icons";
 
-import Container from '@/components/Container';
-import Input from '@/components/Input';
-import Button from '@/components/Button';
+import Container from "@/components/Container";
+import Input from "@/components/Input";
+import Button from "@/components/Button";
 
 const Footer = () => {
   return (
-    <footer className="pt-10 pt-10 pb-4">
+    <footer className={style.footerMain}>
       <Container>
-        <div className="text-center mb-2">
+        <div className="text-center mb-2 pt-40">
           <Image src="/images/CM-white.svg" width={150} height={111} />
         </div>
         {/* <h2 className="text-center font-bold text-3xl text-white mb-10">
@@ -40,18 +40,18 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faFacebookF}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
               <li className="inline-block mr-4">
                 <a
-                  href="javascript:"
+                  href="https://twitter.com/CybermonkeysUSA"
                   className="rounded-full p-3 bg-black bg-opacity-60 inline-block"
                 >
                   <FontAwesomeIcon
                     icon={faTwitter}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
@@ -62,18 +62,18 @@ const Footer = () => {
                 >
                   <FontAwesomeIcon
                     icon={faInstagram}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
               <li className="inline-block mr-4">
                 <a
-                  href="javascript:"
+                  href="https://www.youtube.com/channel/UCU8ynCVA4Ie20gdgbIufWmg/featured"
                   className="rounded-full p-3 bg-black bg-opacity-60 inline-block"
                 >
                   <FontAwesomeIcon
                     icon={faYoutube}
-                    className="w-4 h-4 text-blue-600"
+                    className="w-4 h-4 text-white"
                   />
                 </a>
               </li>
@@ -91,15 +91,23 @@ const Footer = () => {
             </ul>
           </div>
         </div>
+        <div className="px-12 text-center text-white">
+          {/* <hr className="mb-4 relative" /> */}
+          <p className="mb-0">
+            <Link href="/">
+              <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
+            </Link>
+          </p>
+        </div>
+        {/* fixfooter es una clase, guarde el file en componentes: footerImg.css*/}
       </Container>
-      <div className="px-12 text-center text-white">
-        <hr className="mb-4 relative" />
-        <p className="mb-0">
-          <Link href="/">
-            <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
-          </Link>
-        </p>
-      </div>
+      {/* <div className={style.imageContainer}>
+        <Image
+          src="/images/footerBackground.png"
+          layout="fill"
+          className={style.image}
+        />
+      </div> */}
     </footer>
   );
 };

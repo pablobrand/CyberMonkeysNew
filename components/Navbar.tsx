@@ -61,6 +61,7 @@ const Navbar = () => {
               <NavItem title="Media Content" path="/media" />
               <NavItem title="NFTs" path="/nft" />
               <NavItem title="Contact Us" path="/contact" />
+              <NavItem title="Account" path="/account" />
               {/* <NavItem
                 title="Log In"
                 path="/"
