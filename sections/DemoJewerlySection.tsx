@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ASSET_URL_DEMO, CHOSEN_THEME_DEMO } from "./constants";
+import { ASSET_URL_DEMO } from "./constants";
 import Container from "@/components/Container";
 import { iframeResizer } from "iframe-resizer";
-const embeddedUrl = `${ASSET_URL_DEMO}?embed=${CHOSEN_THEME_DEMO}`;
+const embeddedUrl = `${ASSET_URL_DEMO}`;
 
 const DemoJewerlySection = () => {
   const componentDidMount = () => {
