@@ -1,13 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ASSET_URL, CHOSEN_THEME } from "./constants";
+import { ASSET_URL_DEMO, CHOSEN_THEME_DEMO } from "./constants";
 import Container from "@/components/Container";
 import { iframeResizer } from "iframe-resizer";
-const embeddedUrl = `${ASSET_URL}?embed=${CHOSEN_THEME}`;
+const embeddedUrl = `${ASSET_URL_DEMO}?embed=${CHOSEN_THEME_DEMO}`;
 
 const DemoJewerlySection = () => {
   const componentDidMount = () => {
-    iframeResizer({ log: false }, "#opensea-iframe");
+    iframeResizer({ log: false }, "#demoJV-iframe");
   };
   return (
     <section
@@ -26,17 +26,10 @@ const DemoJewerlySection = () => {
           <p className="text-xl font-medium mb-8">
             If you dont have a wallet, please click on the link below:
           </p>
-          <p className="font-sans text-xl text-center">
-            {" "}
-            <Link href="https://support.opensea.io/hc/en-us/articles/1500007978402-Wallets-supported-by-OpenSea">
-              Get a Wallet
-            </Link>
-          </p>
-
           <p>
             <iframe
-              id="opensea-iframe"
-              title="Embedded OpenSea Marketplace"
+              id="demoJV-iframe"
+              title="3D Jewlery Model Demo"
               src={embeddedUrl}
               width="100%"
               height="900px"
@@ -69,13 +62,6 @@ const DemoJewerlySection = () => {
             </h1>
             <div className="pt-2">
               <Image src="/images/Rockin3dAR.png" width={540} height={540} />
-            </div>
-            <div className="pt-8">
-              <Link href="/">
-                <a className="uppercase bg-blue-600 px-6 py-3 rounded-full text-xl">
-                  Buy Now
-                </a>
-              </Link>
             </div>
           </div>
         </div>
