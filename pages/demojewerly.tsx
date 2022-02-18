@@ -2,6 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import Layout from "@/components/Layout";
 import Navbar from "@/components/Navbar";
 import VideoSlider from "@/components/Slider/VideoSlider";
+import DemoJewerlySection from "@/sections/DemoJewerlySection";
 
 const SliderData = [
   {
@@ -26,6 +27,7 @@ const DemoJewerly = () => {
     <Layout>
       <Navbar />
       <VideoSlider slides={SliderData} />
+      <DemoJewerlySection/>
       {/* <VideosSection /> 
       <LatestNewsSection /> */}
       <Footer />
