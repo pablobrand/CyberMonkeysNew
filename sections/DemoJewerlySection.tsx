@@ -70,13 +70,6 @@ const DemoJewerlySection = () => {
             <div className="pt-2">
               <Image src="/images/Rockin3dAR.png" width={540} height={540} />
             </div>
-            <div className="pt-8">
-              <Link href="/">
-                <a className="uppercase bg-blue-600 px-6 py-3 rounded-full text-xl">
-                  Buy Now
-                </a>
-              </Link>
-            </div>
           </div>
         </div>
       </Container>

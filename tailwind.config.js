@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       colors:{
-        'banner-yellow': '#fcd538',
+        'yelloww': '#fcd538',
         'bluee': '#6c9ae7'
       },
       fontFamily: {
