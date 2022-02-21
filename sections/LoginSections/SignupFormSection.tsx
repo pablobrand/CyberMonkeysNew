@@ -7,6 +7,7 @@ import { useContext, useState } from "react";
 import { AccountContext } from "./accountContext";
 import { AiOutlineUser } from "react-icons/ai";
 
+
 const SignupForm = () => {
   const { switchToLogin } = useContext(AccountContext);
   const [state, handleSubmit] = useForm("mdoyeqnp");
@@ -30,7 +31,7 @@ const SignupForm = () => {
             <div className="w-full flex flex-col items-center mt-8">
               <form onSubmit={handleSubmit}>
                 <Input type="text" placeholder="Name" />
-                <Input type="email" placeholder="Email" className="mt-2" />
+                <Input className="mt-2" type="email" placeholder="Email" />
                 <Input
                   type="password"
                   placeholder="Password"
@@ -39,6 +40,11 @@ const SignupForm = () => {
                 <Input
                   type="password"
                   placeholder="Confirm Password"
+                  className="mt-2"
+                />
+                <Input
+                  type="text"
+                  placeholder ="Authentication Code"
                   className="mt-2"
                 />
               </form>
@@ -61,7 +67,7 @@ const SignupForm = () => {
           <a className="text-sm text-white font-medium">
             Already have an account?{" "}
             <a
-              className="text-bluee cursor-pointer"
+              className="text-yelloww cursor-pointer"
               href="#"
               onClick={switchToLogin}
             >

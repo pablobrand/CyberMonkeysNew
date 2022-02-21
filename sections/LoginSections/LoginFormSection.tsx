@@ -55,7 +55,7 @@ const LoginForm = () => {
           <a className="text-sm text-white font-medium">
             Don't have an account?{" "}
             <a
-              className="text-bluee cursor-pointer"
+              className="text-yelloww cursor-pointer"
               href="#"
               onClick={switchToSignup}
             >
