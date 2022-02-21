@@ -7,19 +7,15 @@ import DemoJewerlySection from "@/sections/DemoJewerlySection";
 const SliderData = [
   {
     video:
-      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345570/CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1645464090/JoryeVera/DemoNeckless_y78kbr.jpg",
   },
   {
     video:
-      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345568/CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1645464090/JoryeVera/DemoEARINGS_p30clv.jpg",
   },
   {
     video:
-      "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg",
-  },
-  {
-    video:
-      "https://cdn.mos.cms.futurecdn.net/FQiMdRcDKGsgcxsMfhoXm3-1200-80.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1645464090/JoryeVera/DemoRING_e7rwko.jpg",
   },
 ];
 const DemoJewerly = () => {
@@ -27,7 +23,7 @@ const DemoJewerly = () => {
     <Layout>
       <Navbar />
       <VideoSlider slides={SliderData} />
-      <DemoJewerlySection/>
+      <DemoJewerlySection />
       {/* <VideosSection /> 
       <LatestNewsSection /> */}
       <Footer />

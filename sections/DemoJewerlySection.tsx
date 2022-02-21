@@ -3,6 +3,8 @@ import Image from "next/image";
 import { ASSET_URL_DEMO } from "./constants";
 import Container from "@/components/Container";
 import { iframeResizer } from "iframe-resizer";
+import Button from "@/components/Button";
+import VideoPlayer from "../components/VideoCloudinary"
 const embeddedUrl = `${ASSET_URL_DEMO}`;
 
 const DemoJewerlySection = () => {
@@ -26,7 +28,8 @@ const DemoJewerlySection = () => {
           <p className="text-xl font-medium mb-8">
             Below you will find the Demo for the 3d Model
           </p>
-          <p className="font-sans text-xl text-center"> <Link href="https://adobe.ly/3oYzfOC">Click To See in 3D</Link></p>
+          <p className="font-sans text-xl text-center"> <Link href="https://adobe.ly/3oYzfOC">
+            <Button>Click To See in 3D</Button></Link></p>
           {/* <p>
             <iframe
               id="demoJV-iframe"
@@ -58,11 +61,11 @@ const DemoJewerlySection = () => {
           </div>
           <div className="col-span-12 lg:col-span-5 text-center">
             <h1 className="text-4xl pt-24">
-              <span className="block">Rock</span>
-              <span className="block font-semibold">Original model</span>
+              <span className="block">Video Sample</span>
+              <span className="block font-semibold">Video of 3D and AR </span>
             </h1>
             <div className="pt-2">
-              <Image src="/images/Rockin3dAR.png" width={540} height={540} />
+              <VideoPlayer />
             </div>
           </div>
         </div>
