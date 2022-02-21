@@ -30,8 +30,8 @@ const SignupForm = () => {
             </h4>
             <div className="w-full flex flex-col items-center mt-8">
               <form onSubmit={handleSubmit}>
-                <Input type="text" placeholder="Name" />
-                <Input type="email" className="mt-2" placeholder="Email" />
+                <Input className="placeholder" type="text" placeholder="Name" />
+                <Input className="placeholder mt-2" type="email" placeholder="Email" />
                 <Input
                   type="password"
                   placeholder="Password"
