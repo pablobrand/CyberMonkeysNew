@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import style from "./footerImg.module.css"
+import style from "./footerImg.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -95,7 +95,10 @@ const Footer = () => {
           {/* <hr className="mb-4 relative" /> */}
           <p className="mb-0">
             <Link href="/">
-              <a> Copyright &copy; 2021, All rights reserves by your Company. </a>
+              <a>
+                {" "}
+                Copyright &copy; 2021, All rights reserves by your Company.{" "}
+              </a>
             </Link>
           </p>
         </div>
