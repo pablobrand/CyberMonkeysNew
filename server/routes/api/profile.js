@@ -1,17 +1,18 @@
 const express = require("express");
 const router = express.Router();
 const auth = require("../../middleware/auth");
-const { check, validationResult } = require("express-validator/check");
+const { check, validationResult } = require("express-validator");
+// bring in normalize to give us a proper url, regardless of what user entered
+const normalize = require("normalize-url");
+const checkObjectId = require("../../middleware/checkObjectId");
 
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
-const { Router } = require("express");
-const { profile } = require("console");
 
 // @route   GET api/profile/me
-// @desc    Get cuurrent users profile
+// @desc    Get current users profile
 // @acces   Private
-router.get("/", auth, async (req, res) => {
+router.get("/me", auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({ user: req.user.id }).populate(
       "user",
@@ -34,19 +35,15 @@ router.get("/", auth, async (req, res) => {
 // @acces   Private
 router.post(
   "/",
-  [
-    auth,
-    [
-      check("status", "status is required").not().isEmpty(),
-      check("skills", "skills is required").not().isEmpty(),
-    ],
-  ],
+  auth,
+  check("status", "status is required").not().isEmpty(),
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
 
+    //DESTRUCTURE THE REQUEST
     const {
       company,
       website,
@@ -56,45 +53,57 @@ router.post(
       facebook,
       twitter,
       instagram,
+      //spread the rest of the fields we dont need to check
+      ...rest
     } = req.body;
 
-    // Biuld profile object
-    const profileFields = {};
-    profileFields.user = req.user.id;
-    if (company) profileFields.company = company;
-    if (website) profileFields.website = website;
-    if (location) profileFields.company = location;
-    if (bio) profileFields.bio = bio;
+    // Biuld profile
+    const profileFields = {
+      user: req.user.id,
+      website:
+        website && website !== ""
+          ? normalize(website, { forceHttps: true })
+          : "",
+      ...rest,
+      company:
+        company && company !== ""
+          ? normalize(company, { forceHttps: true })
+          : "",
+      ...rest,
+      location:
+        location && location !== ""
+          ? normalize(location, { forceHttps: true })
+          : "",
+      ...rest,
+      bio:
+        bio && bio !== ""
+          ? normalize(bio, { forceHttps: true })
+          : "",
+      ...rest,
+    };
 
-    // Build Social array
+    // Build Social object
+    const socialFields = { youtube, twitter, instagram, facebook };
 
-    profileFields.social = {};
-    if (youtube) profileFields.social.youtube = youtube;
-    if (twitter) profileFields.social.twitter = twitter;
-    if (facebook) profile.social.facebook = facebook;
-    if (instagram) profileFields.social.instagram = instagram;
+    // normalize social fields to ensure valid url
+    for (const [key, value] of Object.entries(socialFields)) {
+      if (value && value.length > 0)
+        socialFields[key] = normalize(value, { forceHttps: true });
+    }
+    // add to profileFields
+    profileFields.social = socialFields;
 
     try {
-      let profile = await Profile.findOne({ user: req.user.id });
-
-      if (profile) {
-        //Update
-        profile = await Profile.findOneAndUpdate(
-          { user: req.user.id },
-          { $set: profileFields },
-          { new: true }
-        );
-        return res.json(profile);
-      }
-
-      // Create
-      profile = new Profile(profileFields);
-
-      await Profile.save();
-      res.json(profile);
+      // Using upsert option (creates new doc if no match is found):
+      let profile = await Profile.findOneAndUpdate(
+        { user: req.user.id },
+        { $set: profileFields },
+        { new: true, upsert: true, setDefaultsOnInsert: true }
+      );
+      return res.json(profile);
     } catch (err) {
       console.error(err.message);
-      res.status(500).send("Server Error");
+      return res.status(500).send("Server Error");
     }
   }
 );
@@ -115,37 +124,45 @@ router.get("/", async (req, res) => {
 // @route   GET api/profile/user/:user_id
 // @desc    Create all profiles by user ID
 // @acces   Public
-router.get("/user/:user_id", async (req, res) => {
-  try {
-    const profile = await Profile.findOne({
-      user: req.params.user_id,
-    }).populate("user", ["name", "avatar"]);
-    if (!profile)
-      return res.status(400).json({ msg: "Profile not found" });
-    res.json(profile);
-  } catch (err) {
-    console.error(err.message);
-    if(err.kind === 'ObjectId'){
-      return res.status(400).json("Profile not found");
-    }
-    res.status(500).send("Server Error");
-  }
-});
+router.get(
+  "/user/:user_id",
+  checkObjectId("user_id"),
+  async ({ params: { user_id } }, res) => {
+    try {
+      const profile = await Profile.findOne({
+        user: user_id,
+      }).populate("user", ["name", "avatar"]);
 
-// @route   DELETE api/profile/user/:user_id
-// @desc    Delete profile, user and posts
-// @acces   Private
+      if (!profile) return res.status(400).json({ msg: "Profile not found" });
+
+      return res.json(profile);
+    } catch (err) {
+      console.error(err.message);
+      if (err.kind === "ObjectId") {
+        return res.status(500).json({ msg: "Server error" });
+      }
+      res.status(500).send("Server Error");
+    }
+  }
+);
+
+// @route    DELETE api/profile
+// @desc     Delete profile, user & posts
+// @access   Private
 router.delete("/", auth, async (req, res) => {
   try {
     //Remove profile
-    await Profile.findOneAndRemove({user: req.user.id});
-    await User.findOneAndRemove({_id: req.user.id});
-    
-    res.json({msg: 'User removed'});
+    // Remove user
+    await Promise.all([
+      Profile.findOneAndRemove({ user: req.user.id }),
+      User.findOneAndRemove({ _id: req.user.id }),
+    ]);
+
+    res.json({ msg: "User removed" });
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Error");
   }
 });
 
-module.exports = router;
+module.exports = router; 
