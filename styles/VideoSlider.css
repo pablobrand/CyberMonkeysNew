@@ -11,6 +11,7 @@
     width: auto;
     height: auto;
     border-radius: 0px;
+    align-items: stretch;
 }
 
 .right-arrow {
@@ -38,6 +39,8 @@
 .slide {
     opacity: 0;
     transition-duration: 1s ease;
+    place-items: center;
+    align-items: stretch;
 }
 
 .slide.active {

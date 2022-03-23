@@ -14,7 +14,7 @@ import BannerSection from "@/sections/LandingSection";
 const SliderData = [
   {
     video:
-      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345570/CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4",
   },
   {
     video:

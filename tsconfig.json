@@ -2,10 +2,18 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/styles/*": ["styles/*"],
-      "@/sections/*": ["sections/*"],
-      "@/lib/*": ["lib/*"],
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/styles/*": [
+        "styles/*"
+      ],
+      "@/sections/*": [
+        "sections/*"
+      ],
+      "@/lib/*": [
+        "lib/*"
+      ]
     },
     "target": "es5",
     "lib": [
@@ -23,13 +31,15 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "sections/LoginSections/accountContext.js"  ],
+    "**/*.tsx",
+    "sections/LoginSections/accountContext.js"
+  ],
   "exclude": [
     "node_modules"
   ]
