@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
-import Container from "../Container";
 
 const VideoSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -23,8 +22,7 @@ const VideoSlider = ({ slides }) => {
   //"FaAngle" are icons
   return (
     <section className="slider">
-      <Container>
-        <div>
+      <div>
           <FaAngleLeft className="left-arrow" onClick={prevSlide} />
             <FaAngleRight className="right-arrow" onClick={nextSlide} />
           {slides.map((slide, index) => {
@@ -37,14 +35,13 @@ const VideoSlider = ({ slides }) => {
                   <object
                     data={slide.video} //object with values for slider, received from section using it
                     alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
-                    className="w-screen items-stretch"
+                    className="w-screen"
                   />
                 )}
               </div>
             );
           })}
         </div>
-      </Container>
     </section>
   );
 };
