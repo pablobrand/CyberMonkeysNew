@@ -15,7 +15,7 @@ import BannerSection from "../sections/LandingSection";
 const SliderData = [
   {
     video:
-      "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg",
+      "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4",
   },
   {
     video:
