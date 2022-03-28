@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import Vidd from "../Video";
 
 const VideoSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
