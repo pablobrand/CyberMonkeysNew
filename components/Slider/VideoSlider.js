@@ -24,25 +24,25 @@ const VideoSlider = ({ slides }) => {
   return (
     <section className="slider">
       <div>
-          <FaAngleLeft className="left-arrow" onClick={prevSlide} />
-            <FaAngleRight className="right-arrow" onClick={nextSlide} />
-          {slides.map((slide, index) => {
-            return (
-              <div
-                className={index === current ? "slide active" : "slide"}
-                key={index}
-              >
-                {index === current && (
-                  <object
-                    data={slide.video} //object with values for slider, received from section using it
-                    alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
-                    className="w-screen"
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
+        <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+        <FaAngleRight className="right-arrow" onClick={nextSlide} />
+        {slides.map((slide, index) => {
+          return (
+            <div
+              className={index === current ? "slide active" : "slide"}
+              key={index}
+            >
+              {index === current && (
+                <object
+                  data={slide.video} //object with values for slider, received from section using it
+                  alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
+                  className="h-px w-screen"
+                />
+              )}
+            </div>
+          );
+        })}
+      </div>
     </section>
   );
 };

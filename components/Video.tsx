@@ -26,6 +26,7 @@ const Vidd: React.FC<Props> = ({ logo, video }) => {
           "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
         }
         type="video/mp4"
+        className="h-950px"
       />
     </video>
   );
