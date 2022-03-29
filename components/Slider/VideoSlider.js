@@ -36,7 +36,7 @@ const VideoSlider = ({ slides }) => {
                 <object
                   data={slide.video} //object with values for slider, received from section using it
                   alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
-                  className="h-px w-screen"
+                  className="w-screen"
                 />
               )}
             </div>

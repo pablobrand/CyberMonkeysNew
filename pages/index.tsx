@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer/Footer";
 import VideoSlider from "@/components/Slider/VideoSlider";
 import Vidd from "@/components/Video";
+import { Player, ControlBar } from "video-react";
 //import { SliderData } from "@/components/Slider/SliderData.js";
 
 import HomeSection from "@/sections/HomeSection";
@@ -16,14 +17,15 @@ import BannerSection from "../sections/LandingSection";
 const SliderData = [
   {
     video:
-      "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4",
+    (<Vidd video="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4" />),
   },
   {
     video:
       "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345568/CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
   },
   {
-    video: "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg"
+    video:
+      "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg",
   },
   {
     video:
@@ -35,6 +37,7 @@ const Home = () => {
     <Layout>
       <Navbar />
       <VideoSlider slides={SliderData} />
+      <Vidd video="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4" />
       {/* <HomeSection /> */}
       <BannerSection />
       {/* <GlobeSection />

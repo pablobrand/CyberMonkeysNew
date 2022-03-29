@@ -1,11 +1,11 @@
 import React from "react";
+import ReactPlayer from "react-player";
 
 type Props = {
-  logo: string;
   video: string;
 };
 
-const Vidd: React.FC<Props> = ({ logo, video }) => {
+const Vidd: React.FC<Props> = ({ video }) => {
   const handleOnMouseOver = (e: React.MouseEvent<HTMLVideoElement>) =>
     e.currentTarget.play();
 
@@ -14,9 +14,10 @@ const Vidd: React.FC<Props> = ({ logo, video }) => {
 
   return (
     <video
+      style={{ height:"950px", margin: "0 auto" }}
       autoPlay
+      playsInline
       loop
-      preload="none"
       muted
       onMouseOver={handleOnMouseOver}
       onMouseOut={handleOnMouseOut}
@@ -26,7 +27,7 @@ const Vidd: React.FC<Props> = ({ logo, video }) => {
           "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
         }
         type="video/mp4"
-        className="h-950px"
+        className="object-cover"
       />
     </video>
   );
