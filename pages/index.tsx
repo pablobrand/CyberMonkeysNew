@@ -3,7 +3,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer/Footer";
 import VideoSlider from "@/components/Slider/VideoSlider";
 import Vidd from "@/components/Video";
-import { Player, ControlBar } from "video-react";
 //import { SliderData } from "@/components/Slider/SliderData.js";
 
 import HomeSection from "@/sections/HomeSection";
@@ -16,8 +15,7 @@ import BannerSection from "../sections/LandingSection";
 
 const SliderData = [
   {
-    video:
-    (<Vidd video="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4" />),
+    video: <Vidd />
   },
   {
     video:
@@ -37,7 +35,7 @@ const Home = () => {
     <Layout>
       <Navbar />
       <VideoSlider slides={SliderData} />
-      <Vidd video="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4" />
+      <Vidd />
       {/* <HomeSection /> */}
       <BannerSection />
       {/* <GlobeSection />
