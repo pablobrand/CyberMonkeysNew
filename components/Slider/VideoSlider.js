@@ -31,7 +31,7 @@ const VideoSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <video //in order to see the images, change "video" for "object"
+              <object //in order to see the images, change "video" for "object"
                 autoPlay
                 playsInline
                 loop
