@@ -19,7 +19,7 @@
   user-select: none;
 }
 
-.left-arrow { 
+.left-arrow {
   position: absolute;
   top: 50%;
   left: 2px;
@@ -33,6 +33,8 @@
 .slide {
   opacity: 0;
   transition-duration: 1s ease;
+  height: 950px;
+  width: auto;
 }
 
 .slide.active {
@@ -40,9 +42,16 @@
   transition-duration: 1s;
   transform: scale(1);
   object-fit: cover;
-  height: 950px;
 }
+
+.imagefit {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .w-screen {
-  object-fit:cover;
+  object-fit: cover;
   height: 950px;
 }

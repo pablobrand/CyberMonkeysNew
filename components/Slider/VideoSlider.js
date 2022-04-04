@@ -31,15 +31,15 @@ const VideoSlider = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <object //in order to see the images, change "video" for "object"
+              <video //in order to see the images, change "video" for "object"
                 autoPlay
                 playsInline
                 loop
                 muted
-                data={slide.video} //object with values for slider, received from section using it
-                alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
-                className="w-screen"
+                data={slide.video}
+                alt="cybermonkeys slider currently not working"
                 src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+                className="w-screen"
               />
             )}
           </div>
