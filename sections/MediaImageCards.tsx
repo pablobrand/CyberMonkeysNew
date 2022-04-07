@@ -18,7 +18,7 @@ export default function MediaImageCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -34,7 +34,7 @@ export default function MediaImageCard() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
