@@ -74,8 +74,6 @@ export default function TabsSection() {
           <PaginationRounded />
         </div>
       </TabPanel>
-
-      <MediaPagination showPerPage={6} onPaginationChange={undefined} total={undefined} />
     </Box>
   );
 }

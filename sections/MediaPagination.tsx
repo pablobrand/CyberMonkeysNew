@@ -41,7 +41,9 @@ const Pagination = ({ showPerPage, onPaginationChange, total }) => {
           </li>
 
           {new Array(numberOfButtons).fill("").map((el, index) => (
-            <li className={`page-item ${index + 1 === counter ? "active" : null}`}>
+            <li
+              className={`page-item ${index + 1 === counter ? "active" : null}`}
+            >
               <a
                 className="page-link"
                 href="!#"
@@ -65,5 +67,4 @@ const Pagination = ({ showPerPage, onPaginationChange, total }) => {
     </div>
   );
 };
-
 export default Pagination;
