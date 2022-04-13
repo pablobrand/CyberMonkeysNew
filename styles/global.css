@@ -115,3 +115,8 @@ code {
 body {
   @apply font-rajdhani;
 }
+
+.lineSeperator{
+ color: white;
+ border-top-width: 6px;
+}
