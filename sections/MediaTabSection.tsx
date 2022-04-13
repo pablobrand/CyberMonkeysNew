@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import MediaImageCard from "./MediaImageCards";
 import MediaVideoCard from "./MediaVideoCards";
 import PaginationRounded from "@/components/Pagination";
+import MediaPagination from "./MediaPagination";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -73,6 +74,8 @@ export default function TabsSection() {
           <PaginationRounded />
         </div>
       </TabPanel>
+
+      <MediaPagination showPerPage={6} onPaginationChange={undefined} total={undefined} />
     </Box>
   );
 }

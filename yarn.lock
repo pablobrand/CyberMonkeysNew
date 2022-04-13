@@ -2672,10 +2672,10 @@
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.4.4.tgz"
   "version" "4.4.4"
 
-"uikit@^3.13.7":
-  "integrity" "sha512-yQrwf5TThdOgBzODL9TBT4tl5b608qS49FaXD1mKcpjVicCmnRMdtQ9zHcmmMJ2zuayDeg6h3S5+L1BDYOX8EA=="
-  "resolved" "https://registry.npmjs.org/uikit/-/uikit-3.13.7.tgz"
-  "version" "3.13.7"
+"uikit@^3.13.8-dev.e0d437090":
+  "integrity" "sha512-rSQ9jxI08Qx6VDU+Zj5Q7CKVmoCfUgjTRRA801fFOYH5CvvkSZ5/9daX1dptcnFClWKI5cy7Ep7Nd194k+z1jQ=="
+  "resolved" "https://registry.npmjs.org/uikit/-/uikit-3.13.8-dev.e0d437090.tgz"
+  "version" "3.13.8-dev.e0d437090"
 
 "unidragger@^2.3.0":
   "integrity" "sha512-u+IgG7AG0MXJTKcdzAIYxCm+W5FcnA9M28203Awl6jIcE3/+9OtEyUX4Wv64y7XNKEVRKPot52IV4V6x7FlF5Q=="
