@@ -30,7 +30,9 @@
     "react-accessible-accordion": "^3.3.5",
     "react-dom": "^17.0.2",
     "react-flickity-component": "^3.6.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "react-player": "^2.10.0",
+    "video-react": "^0.15.0"
   },
   "devDependencies": {
     "@types/node": "^14.18.9",

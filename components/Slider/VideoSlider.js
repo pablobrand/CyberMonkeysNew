@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import { responseSymbol } from "next/dist/server/web/spec-compliant/fetch-event";
+import React, { useState, useRef } from "react";
 import { FaAngleRight, FaAngleLeft } from "react-icons/fa";
+import { Video, Image, CloudinaryContext, Transformation } from "cloudinary-react";
 
 const VideoSlider = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -19,29 +21,97 @@ const VideoSlider = ({ slides }) => {
     return null;
   }
 
+  const switchingElements = (slide) => {
+    //console.log("current number: " + current);
+    //console.log("slides value: " + JSON.stringify(slide));
+    const videoRef = useRef();
+    if (current === 0) {
+      return (
+        <>
+           <CloudinaryContext cloud_name="cybermonkeysllc">
+            <div>
+                <Video
+                    publicId="CyberMonkeys/B1_zdvhe0"
+                    autoplay = "true"
+                    sound = "false"
+                    loop = "true"
+                    className="w-screen"
+                    innerRef={videoRef}>
+                      <Transformation effect="fade:500"/>
+
+                </Video>
+            </div>
+        </CloudinaryContext>
+        </>
+      );
+    } 
+    if (current === 1){
+      return (
+        <>
+        <CloudinaryContext cloud_name="cybermonkeysllc">
+            <div>
+                <Image
+                    publicId="CyberMonkeys/20100925_WBP504_ft3ywl.webp"
+                    className="w-screen"
+                    innerRef={videoRef}>
+
+                </Image>
+            </div>
+        </CloudinaryContext>
+         
+        </>
+      );
+    }
+    if (current === 2){
+      return (
+        <>
+        <CloudinaryContext cloud_name="cybermonkeysllc">
+            <div>
+                <Image
+                    publicId="CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg"
+                    className="w-screen"
+                    innerRef={videoRef}>
+
+                </Image>
+            </div>
+        </CloudinaryContext>
+         
+        </>
+      );
+    }
+    else {
+      return (
+        <>
+        <CloudinaryContext cloud_name="cybermonkeysllc">
+            <div>
+                <Image
+                    publicId="CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg"
+                    className="w-screen"
+                    innerRef={videoRef}>
+
+                </Image>
+            </div>
+        </CloudinaryContext>
+         
+        </>
+      );
+    }
+  };
   //"FaAngle" are icons
   return (
     <section className="slider">
-      <div>
-          <FaAngleLeft className="left-arrow" onClick={prevSlide} />
-            <FaAngleRight className="right-arrow" onClick={nextSlide} />
-          {slides.map((slide, index) => {
-            return (
-              <div
-                className={index === current ? "slide active" : "slide"}
-                key={index}
-              >
-                {index === current && (
-                  <object
-                    data={slide.video} //object with values for slider, received from section using it
-                    alt="cybermonkeys slider currently not working" //if the page cant load the slide, this message will appear
-                    className="w-screen"
-                  />
-                )}
-              </div>
-            );
-          })}
-        </div>
+      <FaAngleLeft className="left-arrow" onClick={prevSlide} />
+      <FaAngleRight className="right-arrow" onClick={nextSlide} />
+      {slides.map((slide, index) => {
+        return (
+          <div
+            className={index === current ? "slide active" : "slide"}
+            key={index}
+          >
+            {index === current && switchingElements(slide)}
+          </div>
+        );
+      })}
     </section>
   );
 };
