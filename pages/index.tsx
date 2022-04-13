@@ -10,20 +10,20 @@ import BannerSection from "../sections/LandingSection";
 
 const SliderData = [
   {
-    video:
+    source:
       "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4",
   },
   {
-    image:
-      "https://res.cloudinary.com/cybermonkeysllc/image/upload/v1630345568/CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
+    source:
+      "CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg",
   },
   {
-    image:
-      "https://masteres.ugr.es/marketing/sites/master/marketing/public/imagenes/cabecera/2021-05/grupo-m%C3%A1rketing.jpg",
+    source:
+      "CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
   },
   {
-    image:
-      "https://cdn.mos.cms.futurecdn.net/FQiMdRcDKGsgcxsMfhoXm3-1200-80.jpg",
+    source:
+      "CyberMonkeys/20100925_WBP504_ft3ywl.webp",
   },
 ];
 const Home = () => {
