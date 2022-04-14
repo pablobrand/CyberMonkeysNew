@@ -3,10 +3,10 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import MediaImageCard from "./MediaImageCards";
-import MediaVideoCard from "./MediaVideoCards";
+import MediaImageCard from "@/sections/MediaImageCards";
+import MediaVideoCard from "@/sections/MediaVideoCards";
 import PaginationRounded from "@/components/Pagination";
-import MediaPagination from "./MediaPagination";
+import MediaPagination from "@/sections/MediaPagination";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -41,7 +41,7 @@ function a11yProps(index: number) {
   };
 }
 
-export default function TabsSection() {
+export default function TabComponent() {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
@@ -64,14 +64,13 @@ export default function TabsSection() {
       <TabPanel value={value} index={0}>
         <MediaImageCard />
         <div className="mt-10 text-white">
-          <PaginationRounded />
+        <MediaPagination />
         </div>
       </TabPanel>
 
       <TabPanel value={value} index={1}>
         <MediaVideoCard />
         <div className="mt-10">
-          <PaginationRounded />
         </div>
       </TabPanel>
     </Box>

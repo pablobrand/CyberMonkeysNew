@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import Container from "@/components/Container";
 
-import TabsSection from "./MediaTabSection";
-import PaginationMediaa from "./MediaPagination";
+import TabComponent from "@/components/Tab";
+import MediaPagination from "./MediaPagination";
 
 const MediaSection = () => (
   <section className="grid min-h-screen mt-20 mb-24 text-white">
@@ -18,8 +18,8 @@ const MediaSection = () => (
           <p className="text-xl font-medium mb-8">
             We are currently working on some videos that will be of benefit to
             those looking to learn more about Blockchain. We look forward to
-            providing you with valuable content, thank you for your patience
-            and understanding.
+            providing you with valuable content, thank you for your patience and
+            understanding.
           </p>
           <p>
             <Link href="/">
@@ -34,12 +34,12 @@ const MediaSection = () => (
             <Image src="/images/media.png" width={540} height={432} />
           </div>
         </div>
-
-
       </div>
-      <TabsSection />
-    </Container>
 
+      <div>
+        <TabComponent />
+      </div>
+    </Container>
   </section>
 );
 

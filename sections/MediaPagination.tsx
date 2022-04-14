@@ -1,70 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import Posts from '../components/Posts';
+import Pagination from '../components/Pagination';
+import axios from 'axios';
 
-const Pagination = ({ showPerPage, onPaginationChange, total }) => {
-  const [counter, setCounter] = useState(1);
-  const [numberOfButtons, setNumberOfButoons] = useState(
-    Math.ceil(total / showPerPage)
-  );
+const MediaPagination = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
 
   useEffect(() => {
-    const value = showPerPage * counter;
-    onPaginationChange(value - showPerPage, value);
-  }, [counter]);
+    const fetchPosts = async () => {
+      setLoading(true);
+      const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
+      setPosts(res.data);
+      setLoading(false);
+    };
 
-  const onButtonClick = (type) => {
-    if (type === "prev") {
-      if (counter === 1) {
-        setCounter(1);
-      } else {
-        setCounter(counter - 1);
-      }
-    } else if (type === "next") {
-      if (numberOfButtons === counter) {
-        setCounter(counter);
-      } else {
-        setCounter(counter + 1);
-      }
-    }
-  };
+    fetchPosts();
+  }, []);
+
+  // Get current posts
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+  // Change page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
-    <div className="d-flex justify-content-center">
-      <nav aria-label="Page navigation example">
-        <ul className="pagination">
-          <li className="page-item">
-            <a
-              className="page-link"
-              href="!#"
-              onClick={() => onButtonClick("prev")}
-            >
-              Previous
-            </a>
-          </li>
-
-          {new Array(numberOfButtons).fill("").map((el, index) => (
-            <li
-              className={`page-item ${index + 1 === counter ? "active" : null}`}
-            >
-              <a
-                className="page-link"
-                href="!#"
-                onClick={() => setCounter(index + 1)}
-              >
-                {index + 1}
-              </a>
-            </li>
-          ))}
-          <li className="page-item">
-            <a
-              className="page-link"
-              href="!#"
-              onClick={() => onButtonClick("next")}
-            >
-              Next
-            </a>
-          </li>
-        </ul>
-      </nav>
+    <div className='container mt-5'>
+      <h1 className='text-primary mb-3'>My Blog</h1>
+      <Posts posts={currentPosts} loading={loading} />
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={posts.length}
+        paginate={paginate}
+      />
     </div>
   );
 };
-export default Pagination;
+
+export default MediaPagination;
