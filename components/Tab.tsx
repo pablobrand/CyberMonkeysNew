@@ -63,14 +63,12 @@ export default function TabComponent() {
 
       <TabPanel value={value} index={0}>
         <MediaImageCard />
-        <div className="mt-10 text-white">
-        <MediaPagination />
-        </div>
       </TabPanel>
 
       <TabPanel value={value} index={1}>
         <MediaVideoCard />
         <div className="mt-10">
+        <MediaPagination />
         </div>
       </TabPanel>
     </Box>

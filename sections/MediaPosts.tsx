@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-function App() {
+function Posts() {
   const [posts, setPosts] = useState([
     {
       userId: 1,
