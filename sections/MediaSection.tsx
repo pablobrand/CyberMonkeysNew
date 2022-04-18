@@ -4,7 +4,6 @@ import Image from "next/image";
 import Container from "@/components/Container";
 
 import TabComponent from "@/components/Tab";
-import MediaPagination from "./MediaPagination";
 
 const MediaSection = () => (
   <section className="grid min-h-screen mt-20 mb-24 text-white">

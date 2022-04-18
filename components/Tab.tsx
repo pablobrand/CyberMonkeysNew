@@ -5,8 +5,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import MediaImageCard from "@/sections/MediaImageCards";
 import MediaVideoCard from "@/sections/MediaVideoCards";
-import PaginationRounded from "@/components/Pagination";
-import MediaPagination from "@/sections/MediaPagination";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -67,9 +65,6 @@ export default function TabComponent() {
 
       <TabPanel value={value} index={1}>
         <MediaVideoCard />
-        <div className="mt-10">
-        <MediaPagination />
-        </div>
       </TabPanel>
     </Box>
   );
