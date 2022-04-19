@@ -7,7 +7,7 @@ import { CardActionArea } from "@mui/material";
 
 export default function MediaVideoCard() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
@@ -29,7 +29,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -45,7 +45,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -61,7 +61,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -77,7 +77,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -93,7 +93,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -125,7 +125,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -141,7 +141,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -157,7 +157,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -173,7 +173,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>
@@ -189,7 +189,7 @@ export default function MediaVideoCard() {
           <CardMedia
             component="video"
             height="140"
-            image="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
+            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
           <CardContent>

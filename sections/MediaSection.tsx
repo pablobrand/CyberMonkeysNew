@@ -7,10 +7,10 @@ import TabComponent from "@/components/Tab";
 
 const MediaSection = () => (
   <section className="grid min-h-screen mt-40 mb-24 text-white">
-     <div className="mr-60 ml-60">
-        <TabComponent />
-      </div>
-  </section>
+    <Container>
+      <TabComponent />
+    </Container>
+    </section>
 );
 
 export default MediaSection;
