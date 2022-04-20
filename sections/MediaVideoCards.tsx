@@ -11,7 +11,7 @@ export default function MediaVideoCard() {
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
-            height="140"
+            height="240"
             component="video"
             src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
@@ -27,8 +27,8 @@ export default function MediaVideoCard() {
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
+            height="240"
             component="video"
-            height="140"
             src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
@@ -43,8 +43,8 @@ export default function MediaVideoCard() {
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardMedia
+          height="240"
             component="video"
-            height="140"
             src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
             controls
           />
