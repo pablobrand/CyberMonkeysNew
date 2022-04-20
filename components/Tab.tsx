@@ -5,6 +5,7 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import MediaImageCard from "@/sections/MediaImageCards";
 import MediaVideoCard from "@/sections/MediaVideoCards";
+import Pagination from "./Pagination";
 
 interface TabPanelProps {
   children?: React.ReactNode;
