@@ -4,21 +4,33 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import video1 from "../videos/B1.mp4";
+import video2 from "../videos/B1.mp4";
+import video3 from "../videos/B1.mp4";
+import video4 from "../videos/B1.mp4";
+import video5 from "../videos/B1.mp4";
+import video6 from "../videos/B1.mp4";
+import { useRef } from "react";
+import ReactPlayer from 'react-player'
 
 export default function MediaVideoCard() {
+
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
-          <CardMedia
-            height="240"
-            component="video"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
+          <CardMedia>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            src={video1}
+            width='100%'
+            height='100%'
+            controls = {true}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Video
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -26,15 +38,18 @@ export default function MediaVideoCard() {
 
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
-          <CardMedia
-            height="240"
-            component="video"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
+          <CardMedia>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            src={video2}
+            width='100%'
+            height='100%'
+            controls = {true}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -42,15 +57,18 @@ export default function MediaVideoCard() {
 
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
-          <CardMedia
-          height="240"
-            component="video"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
+          <CardMedia>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            src={video3}
+            width='100%'
+            height='100%'
+            controls = {true}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -58,15 +76,18 @@ export default function MediaVideoCard() {
 
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
+          <CardMedia>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            src={video4}
+            width='100%'
+            height='100%'
+            controls = {true}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -74,15 +95,18 @@ export default function MediaVideoCard() {
 
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
+          <CardMedia>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            src={video5}
+            width='100%'
+            height='100%'
+            controls = {true}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -90,111 +114,18 @@ export default function MediaVideoCard() {
 
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
+          <CardMedia>
+          <ReactPlayer
+            className='react-player fixed-bottom'
+            src={video6}
+            width='100%'
+            height='100%'
+            controls = {true}
+            />
+          </CardMedia>
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            height="140"
-            component="video"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Video
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-      </Card>
-
-      <Card sx={{ maxWidth: 345 }}>
-        <CardActionArea>
-          <CardMedia
-            component="video"
-            height="140"
-            src="https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4"
-            controls
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
+              Photography
             </Typography>
           </CardContent>
         </CardActionArea>

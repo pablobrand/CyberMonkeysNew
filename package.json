@@ -37,7 +37,9 @@
     "react-flickity-component": "^3.6.2",
     "react-icons": "^4.3.1",
     "react-paginate": "^8.1.2",
-    "uikit": "^3.13.8-dev.e0d437090"
+    "react-player": "^2.10.0",
+    "uikit": "^3.13.8-dev.e0d437090",
+    "video-react": "^0.15.0"
   },
   "devDependencies": {
     "@types/node": "^14.18.9",
