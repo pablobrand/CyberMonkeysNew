@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/Footer";
 
 
 import MediaSection from "@/sections/MediaSection";
+import TabsSection from "../sections/MediaTabSection";
 import VideosSection from "@/sections/VideosSection";
 import LatestNewsSection from "@/sections/LatestNewsSection";
 import VideoSlider from "@/components/Slider/VideoSlider";
@@ -11,12 +12,13 @@ import VideoSlider from "@/components/Slider/VideoSlider";
 
 const Media = () => {
   return (
-    <Layout>
+    <Layout children={""}>
       <Navbar />
       <MediaSection />
       {/* <VideosSection /> 
       <LatestNewsSection /> */
       }
+      <TabsSection />
       <Footer />
     </Layout>
   );

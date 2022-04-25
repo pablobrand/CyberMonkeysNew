@@ -1,29 +1,21 @@
 import * as React from "react";
+import Image from 'next/image'
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
+import imgOne from '../images/LOGOS CON TEXTO.jpg'
+import imgTwo from '../images/LOGOTYPES.jpg'
+
 
 export default function MediaImageCard() {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 345}}>
         <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="https://www.everythingreptiles.com/wp-content/uploads/2020/05/Green-Iguana-Feature.jpg"
-            alt="green iguana"
-          />
-          <CardContent>
-            <Typography gutterBottom variant="h5" component="div">
-              Lizard
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Lizards are a widespread group of squamate reptiles, with over
-              6,000 species, ranging across all continents except Antarctica
-            </Typography>
+          <CardContent sx={{ height: 280}}>
+          <Image src={imgOne} alt="me" layout="fill" placeholder="blur"/>
           </CardContent>
         </CardActionArea>
       </Card>
