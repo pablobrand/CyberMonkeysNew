@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import Container from "@/components/Container";
 
+import TabsSection from "./MediaTabSection";
+
 const MediaSection = () => {
   return (
     <section className="grid min-h-screen mt-20 mb-24 text-white">
@@ -32,37 +34,12 @@ const MediaSection = () => {
               <Image src="/images/media.png" width={540} height={432} />
             </div>
           </div>
+
+          
         </div>
+        <TabsSection />
       </Container>
 
-      <Container>
-        <div className="grid grid-cols-12">
-          <div className="col-span-12 lg:col-span-5">
-            <h1 className="text-5xl pt-32">
-              <span className="block">Images</span>
-            </h1>
-            <div className="col-span-12 lg:col-span-7 text-right">
-              <div className="pt-16">
-                <Image src="/images/media.png" width={540} height={432} />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-12">
-          <div className="col-span-12 lg:col-span-5">
-            <h1 className="text-5xl pt-32">
-              <span className="block">Videos</span>
-            </h1>
-            <div className="col-span-12 lg:col-span-7 text-right">
-              <div className="pt-16">
-                <Image src="/images/footerBackground.png" width={540} height={432} />
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </Container>
     </section>
   );
 };
