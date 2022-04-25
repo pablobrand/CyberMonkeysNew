@@ -1,50 +1,57 @@
 .slider {
-    position: relative;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items:  center;
-    padding-bottom: 80px;
-}
-
-.video {
-    width: auto;
-    height: auto;
-    border-radius: 0px;
+  position: relative;
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 80px;
 }
 
 .right-arrow {
-    position: absolute;
-    top: 50%;
-    right: 2px;
-    font-size: 3rem;
-    color: rgb(55, 55, 55);
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .left-arrow {
-    position: absolute;
-    top: 50%;
-    left: 2px;
-    font-size: 3rem;
-    color: rgb(55, 55, 55);
-    z-index: 10;
-    cursor: pointer;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
 }
 
 .slide {
-    opacity: 0;
-    transition-duration: 1s ease;
+  opacity: 0;
+  transition-duration: 1s ease;
+  height: 950px;
+  width: auto;
 }
 
 .slide.active {
-    opacity: 1;
-    transition-duration: 1s;
-    transform: scale(1);
+  opacity: 1;
+  transition-duration: 1s;
+  transform: scale(1);
+  object-fit: cover;
 }
-.w-screen{
-    object-fit: contain;
+
+.imagefit {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.w-screen {
+  object-fit: cover;
+  height: 950px;
 }
