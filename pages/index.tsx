@@ -14,21 +14,6 @@ import {
 
 import BannerSection from "../sections/LandingSection"
 
-const SliderData = [
-  {
-    source:
-      "https://res.cloudinary.com/cybermonkeysllc/video/upload/v1647887060/CyberMonkeys/B1_zdvhe0.mp4",
-  },
-  {
-    source: "CyberMonkeys/robert-murray-toCqTyxsT4Q-unsplash_qbofl1.jpg",
-  },
-  {
-    source: "CyberMonkeys/gautier-salles-uffQnKuJ-hc-unsplash_fl7nsn.jpg",
-  },
-  {
-    source: "CyberMonkeys/20100925_WBP504_ft3ywl.webp",
-  },
-]
 const Home = () => {
   const videoRef = useRef()
   return (
@@ -37,10 +22,11 @@ const Home = () => {
       <CloudinaryContext cloud_name="cybermonkeysllc">
         <div>
           <Video
-            publicId="CyberMonkeys/B1_zdvhe0"
-            autoplay="true"
+            publicId="CyberMonkeys/cybermonkeys_promov1_lowerquality_nao95o"
+            loading="lazy"
+            autoPlay={true}
             sound="false"
-            loop="true"
+            loop={true}
             className="w-screen"
             innerRef={videoRef}
           >
